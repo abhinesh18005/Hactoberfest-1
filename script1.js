@@ -11,7 +11,7 @@ class Calculator {
     }
 
     delete() {
-        this.currentOperand = this.currentOperand.toString().slice(0, -1)
+        this.currentOperand = this.currentOperand.toString().slice(0, -3)
     }
 
     appendNumber(number) {
@@ -46,6 +46,12 @@ class Calculator {
                 break
             case '÷':
                 computation = prev / current
+                break
+            case '%':
+                computation = prev % current
+                break
+            case '^':
+                computation = prev ^ current
                 break
             default:
                 return
